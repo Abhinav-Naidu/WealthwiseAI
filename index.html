@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>WealthWise AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', 'sans-serif'], // Modern, humble, legible
+            },
+            colors: {
+              brand: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                500: '#6366f1', // Indigo
+                600: '#4f46e5',
+                700: '#4338ca',
+                900: '#312e81',
+              }
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(99, 102, 241, 0.5)',
+              'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc; /* Slate 50 */
+        color: #0f172a; /* Slate 900 */
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      .dark body {
+        background-color: #020617; /* Slate 950 - Deep Navy Black */
+        color: #f8fafc;
+        /* Subtle Gradient for depth in dark mode */
+        background-image: 
+          radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 40%);
+        background-attachment: fixed;
+      }
+      
+      /* Modern Card Styles - High Contrast & Clean */
+      .neo-card {
+        background: white;
+        border: 1px solid #e2e8f0; /* Slate 200 */
+      }
+      .dark .neo-card {
+        background: #0f172a; /* Slate 900 */
+        border: 1px solid #1e293b; /* Slate 800 */
+      }
+
+      /* Inputs - Distinct from background */
+      .neo-input {
+        background: #f1f5f9; /* Slate 100 */
+        border: 1px solid transparent;
+        color: #0f172a;
+      }
+      .neo-input:focus {
+        background: white;
+        border-color: #6366f1; /* Brand */
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+      }
+      
+      .dark .neo-input {
+        background: #1e293b; /* Slate 800 */
+        color: white;
+        border: 1px solid #334155;
+      }
+      .dark .neo-input:focus {
+        background: #0f172a;
+        border-color: #6366f1;
+      }
+
+      /* Scrollbar hiding for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
