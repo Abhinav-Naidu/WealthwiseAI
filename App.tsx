@@ -3,7 +3,7 @@ import {
   Transaction, Account, User, GamificationStats, TransactionType, 
   RecurringPayment, CategoryMap, PriceLog, AppSettings, ParsedTransactionData, ChatMessage 
 } from './types';
-import { parseNaturalLanguageInput, runFinancialAnalysis, predictItemDetails } from './services/geminiService';
+import { parseNaturalLanguageInput, runFinancialAnalysis, predictItemDetails } from './geminiService';
 import { 
   Wallet, TrendingUp, Zap, Calendar, Plus, Trash2, Download, Award, 
   BrainCircuit, Calculator, Edit2, X, Check, History, Upload, Tag, 
